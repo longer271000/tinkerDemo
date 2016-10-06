@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TinkerDemo</string>
+    <string name="test_resource">test_resource</string>
+</resources>
