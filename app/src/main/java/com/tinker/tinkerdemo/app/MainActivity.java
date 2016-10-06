@@ -28,7 +28,9 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tencent.tinker.lib.tinker.Tinker;
 import com.tencent.tinker.lib.tinker.TinkerInstaller;
@@ -46,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.e(TAG, "i am on onCreate classloader:" + MainActivity.class.getClassLoader().toString());
-        //test resource change
-        Log.e(TAG, "i am on onCreate string:" + getResources().getString(R.string.test_resource));
-//        Log.e(TAG, "i am on patch onCreate");
+//        //test resource change
+//        Log.e(TAG, "i am on onCreate string:" + getResources().getString(R.string.test_resource));
+        Log.e(TAG, "i am on patch onCreate");
+        Toast.makeText(this,"i am on patch onCreate",Toast.LENGTH_LONG);
 
         Button loadPatchButton = (Button) findViewById(R.id.loadPatch);
 
@@ -139,8 +142,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        Log.e(TAG, "i am on onResume");
-//        Log.e(TAG, "i am on patch onResume");
+//        Log.e(TAG, "i am on onResume");
+        Log.e(TAG, "i am on patch onResume");
+        Toast.makeText(this,"i am on patch onResume",Toast.LENGTH_LONG);
 
         super.onResume();
         Utils.setBackground(false);

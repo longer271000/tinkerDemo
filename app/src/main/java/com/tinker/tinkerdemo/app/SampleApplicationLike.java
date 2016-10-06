@@ -25,11 +25,9 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.support.multidex.MultiDex;
 
-import com.tencent.tinker.anno.DefaultLifeCycle;
 import com.tencent.tinker.lib.tinker.TinkerInstaller;
 import com.tencent.tinker.loader.app.ApplicationLifeCycle;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
-import com.tencent.tinker.loader.shareutil.ShareConstants;
 import com.tinker.tinkerdemo.Log.MyLogImp;
 import com.tinker.tinkerdemo.util.SampleApplicationContext;
 import com.tinker.tinkerdemo.util.TinkerManager;
@@ -57,9 +55,9 @@ import com.tinker.tinkerdemo.util.TinkerManager;
  * Created by zhangshaowen on 16/3/17.
  */
 @SuppressWarnings("unused")
-@DefaultLifeCycle(application = "tinker.sample.android.app.SampleApplication",
-                  flags = ShareConstants.TINKER_ENABLE_ALL,
-                  loadVerifyFlag = false)
+//@DefaultLifeCycle(application = "tinker.sample.android.app.SampleApplication",
+//                  flags = ShareConstants.TINKER_ENABLE_ALL,
+//                  loadVerifyFlag = false)
 public class SampleApplicationLike extends DefaultApplicationLike {
     private static final String TAG = "Tinker.SampleApplicationLike";
 
